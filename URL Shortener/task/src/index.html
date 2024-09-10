@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Added 'lang' attribute for accessibility -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added for responsive design -->
+    <title>URL Shortener</title>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="URLShortenerStep4.js" defer></script> <!-- Use 'defer' to ensure the script loads after the HTML -->
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="pinkStyle.css">
+</head>
+<body>
+<!-- Main heading for the URL shortener tool -->
+<h1>URL Shortener</h1>
+
+<!-- Input field for users to enter the URL -->
+<input id="input-url" type="url" placeholder="Enter a url" required aria-label="Enter a URL" /> <!-- Added 'required' for validation and 'aria-label' for accessibility -->
+
+<!-- Button to trigger URL validation and creation of shortened URL -->
+<button id="button-create" onclick="handleUrlCreation()">Create</button>
+
+<!-- Button to delete a URL from the list based on input -->
+<button id="button-delete" onclick="handleUrlDeletion()">Delete</button>
+
+<!-- Error message paragraph, styled with red color -->
+<p id="error-message" style="color: red;"></p>
+
+<ol id="list-url">
+    <!-- Shortened URLs will be dynamically added here -->
+</ol>
+</body>
+</html>
